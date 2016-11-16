@@ -5,7 +5,7 @@ GLUON_SITE_PACKAGES := \
     gluon-config-mode-core \
     gluon-config-mode-autoupdater \
     gluon-config-mode-hostname \
-    gluon-config-mode-tunneldigger \
+    gluon-config-mode-mesh-vpn \
     gluon-config-mode-geo-location \
     gluon-config-mode-contact-info \
     gluon-ebtables-filter-multicast \
@@ -17,18 +17,15 @@ GLUON_SITE_PACKAGES := \
     gluon-luci-portconfig \
     gluon-luci-wifi-config \
     gluon-next-node \
-    gluon-mesh-vpn-tunneldigger \
+    gluon-mesh-vpn-fastd \
     gluon-radvd \
     gluon-status-page \
     gluon-setup-mode \
-    gluon-tunneldigger-watchdog \
     iwinfo \
     iptables \
     haveged
-DEFAULT_GLUON_RELEASE := 2016.2.1-0.9.0+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 0.8.4+exp$(shell date '+%Y%m%d')
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 # Languages to include
 GLUON_LANGS ?= en de
-GLUON_ATH10K_MESH ?= ibss
-GLUON_REGION ?= eu
