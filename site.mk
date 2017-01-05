@@ -23,6 +23,7 @@ GLUON_SITE_PACKAGES := \
     gluon-setup-mode \
     iwinfo \
     iptables \
+    gluon-banner \
     haveged
 
 DEFAULT_GLUON_RELEASE := 2016.2.2-0.9.0+exp$(shell date '+%Y%m%d')
