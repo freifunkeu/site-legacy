@@ -1,0 +1,6 @@
+
+GLUON_SITE_FEEDS='ffeu'
+
+PACKAGES_FFEU_REPO=https://github.com/freifunkeu/packages.git
+PACKAGES_FFEU_BRANCH=master
+PACKAGES_FFEU_COMMIT=678ebb978b05f6f7e44555cabd60806c3b34d5e3
