@@ -8,10 +8,10 @@
 GLUON_SITE_FEEDS='ffeu_packages'
 ##	PACKAGES_$feedname_REPO
 #		the  git repository from where to clone the package feed
-PACKAGES_FFRL_PACKAGES_REPO=https://github.com/freifunkeu/packages.git
+PACKAGES_FFEU_PACKAGES_REPO=https://github.com/freifunkeu/packages.git
 ##	PACKAGES_$feedname_COMMIT
 #		the version/commit of the git repository to clone
-PACKAGES_FFRL_PACKAGES_COMMIT=cb4c928836145c6f8d21694192cb3713f9f69972
+PACKAGES_FFEU_PACKAGES_COMMIT=cb4c928836145c6f8d21694192cb3713f9f69972
 ##  PACKAGES_$feedname_BRANCH
 #   the branch to check out
-#PACKAGES_FFRL_PACKAGES_BRANCH=Branch_v2016.1.x
+#PACKAGES_FFEU_PACKAGES_BRANCH=Branch_v2016.1.x
