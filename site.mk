@@ -22,6 +22,7 @@ GLUON_SITE_PACKAGES := \
     gluon-status-page \
     gluon-setup-mode \
     gluon-tunneldigger-watchdog \
+    gluon-banner \
     iwinfo \
     iptables \
     haveged
