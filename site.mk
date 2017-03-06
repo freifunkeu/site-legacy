@@ -11,7 +11,6 @@ GLUON_SITE_PACKAGES := \
     gluon-ebtables-filter-multicast \
     gluon-ebtables-filter-ra-dhcp \
     gluon-neighbour-info \
-    gluon-luci-private-wifi \
     gluon-luci-admin \
     gluon-luci-autoupdater \
     gluon-luci-portconfig \
