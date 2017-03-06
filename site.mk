@@ -11,7 +11,6 @@ GLUON_SITE_PACKAGES := \
     gluon-ebtables-filter-multicast \
     gluon-ebtables-filter-ra-dhcp \
     gluon-neighbour-info \
-    gluon-luci-private-wifi \
     gluon-luci-admin \
     gluon-luci-autoupdater \
     gluon-luci-portconfig \
@@ -26,7 +25,7 @@ GLUON_SITE_PACKAGES := \
     gluon-banner \
     haveged
 
-DEFAULT_GLUON_RELEASE := 2016.2.3-0.9.1+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := fastd-2016.2.3-0.9.1+exp$(shell date '+%Y%m%d')
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 # Languages to include
