@@ -1,17 +1,5 @@
-# This file allows specifying additional repositories to use
-# when building gluon.
-#
-# In most cases, it is not required so don't add it.
-##	GLUON_SITE_FEEDS
-#		for each feed name given, add the corresponding PACKAGES_* lines
-#		documented below
-GLUON_SITE_FEEDS='ffeu_packages'
-##	PACKAGES_$feedname_REPO
-#		the  git repository from where to clone the package feed
-PACKAGES_FFEU_PACKAGES_REPO=https://github.com/freifunkeu/packages.git
-##	PACKAGES_$feedname_COMMIT
-#		the version/commit of the git repository to clone
-PACKAGES_FFEU_PACKAGES_COMMIT=2a0ba73376612aae20e185be23f2c71860bbf059
-##  PACKAGES_$feedname_BRANCH
-#   the branch to check out
-#PACKAGES_FFEU_PACKAGES_BRANCH=Branch_v2016.1.x
+GLUON_SITE_FEEDS='ffeu'
+
+PACKAGES_FFEU_REPO=https://github.com/freifunkeu/packages.git
+PACKAGES_FFEU_BRANCH=master
+PACKAGES_FFEU_COMMIT=2a0ba73376612aae20e185be23f2c71860bbf059
