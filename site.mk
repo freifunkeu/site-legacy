@@ -25,7 +25,7 @@ GLUON_SITE_PACKAGES := \
     gluon-banner \
     haveged
 
-DEFAULT_GLUON_RELEASE := fastd-2016.2.5-0.9.3+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := fastd-2016.2.6-0.9.4+exp$(shell date '+%Y%m%d')
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 # Languages to include
