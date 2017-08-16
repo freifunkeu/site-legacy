@@ -22,10 +22,11 @@ GLUON_SITE_PACKAGES := \
     gluon-setup-mode \
     gluon-tunneldigger-watchdog \
     gluon-banner \
+    gluon-web-private-wifi \
     iwinfo \
     iptables \
     haveged
-DEFAULT_GLUON_RELEASE := l2tp-2016.2.6-0.9.4+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := l2tp-2016.2.7-0.9.5+exp$(shell date '+%Y%m%d')
 # Allow overriding the release number from the command line
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 # Languages to include
