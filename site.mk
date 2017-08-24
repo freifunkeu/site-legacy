@@ -22,7 +22,6 @@ GLUON_SITE_PACKAGES := \
     gluon-setup-mode \
     gluon-tunneldigger-watchdog \
     gluon-banner \
-    gluon-web-private-wifi \
     iwinfo \
     iptables \
     haveged
