@@ -1,34 +1,54 @@
-GLUON_SITE_PACKAGES := \
-    gluon-mesh-batman-adv-15 \
-    gluon-respondd \
-    gluon-autoupdater \
-    gluon-config-mode-core \
-    gluon-config-mode-autoupdater \
-    gluon-config-mode-hostname \
-    gluon-config-mode-mesh-vpn \
-    gluon-config-mode-geo-location \
-    gluon-config-mode-contact-info \
-    gluon-ebtables-filter-multicast \
-    gluon-ebtables-filter-ra-dhcp \
-    gluon-neighbour-info \
-    gluon-luci-admin \
-    gluon-luci-autoupdater \
-    gluon-luci-portconfig \
-    gluon-luci-wifi-config \
-    gluon-next-node \
-    gluon-mesh-vpn-fastd \
-    gluon-radvd \
-    gluon-status-page \
-    gluon-setup-mode \
-    iwinfo \
-    iptables \
-    gluon-banner \
-    haveged
+##	gluon site.mk makefile example
 
-DEFAULT_GLUON_RELEASE := fastd-2016.2.7-0.9.6+exp$(shell date '+%Y%m%d')
-# Allow overriding the release number from the command line
+##	GLUON_FEATURES
+#		Specify Gluon features/packages to enable;
+#		Gluon will automatically enable a set of packages
+#		depending on the combination of features listed
+
+GLUON_FEATURES := \
+	autoupdater \
+	ebtables-filter-multicast \
+	ebtables-filter-ra-dhcp \
+	mesh-batman-adv-15 \
+	mesh-vpn-fastd \
+	radvd \
+	respondd \
+	status-page \
+	web-advanced \
+	web-wizard
+
+##	GLUON_SITE_PACKAGES
+#		Specify additional Gluon/LEDE packages to include here;
+#		A minus sign may be prepended to remove a packages from the
+#		selection that would be enabled by default or due to the
+#		chosen feature flags
+
+GLUON_SITE_PACKAGES := haveged iwinfo
+
+##	DEFAULT_GLUON_RELEASE
+#		version string to use for images
+#		gluon relies on
+#			opkg compare-versions "$1" '>>' "$2"
+#		to decide if a version is newer or not.
+
+DEFAULT_GLUON_RELEASE := fastd-2017.1.4-0.9.6+exp$(shell date '+%Y%m%d')
+
+# Variables set with ?= can be overwritten from the command line
+
+##	GLUON_RELEASE
+#		call make with custom GLUON_RELEASE flag, to use your own release version scheme.
+#		e.g.:
+#			$ make images GLUON_RELEASE=23.42+5
+#		would generate images named like this:
+#			gluon-ff%site_code%-23.42+5-%router_model%.bin
+
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
+
+# Default priority for updates.
+GLUON_PRIORITY ?= 0
+
+# Region code required for some images; supported values: us eu
+GLUON_REGION ?= eu
+
 # Languages to include
 GLUON_LANGS ?= en de
-GLUON_ATH10K_MESH ?= ibss
-GLUON_REGION ?= eu
